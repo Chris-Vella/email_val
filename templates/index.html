@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Friends</title>
+    </head>
+    <body>
+        <form action='/email' method='POST'>
+            <label for="email">Email:<input type="text" email="email" id="email"></label>
+            <input type="submit" value="Add">
+        </form>
+        {{ all_email }}
+        <h3>Email addresses entered:</h3>
+        {% for email in all_email %}
+            <p>Email: {{ email['email'] }}</p>
+            <hr>
+        {% endfor %}
+    </body>
+</html>
+    
